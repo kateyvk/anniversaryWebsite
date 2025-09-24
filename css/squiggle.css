@@ -1,85 +1,92 @@
+header {
+  text-align: center;
+  background: #115139;
+  color: #fff;
+  padding: 5vw 0.1; 
+}
+
+/* The grid container */
 .container {
   display: grid;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3, auto);
   place-content: center;
   gap: 8px;
 }
+
+/* Base image styles */
 img {
-  --s: 12px;  /* control the size of the wave */
+  --s: 12px; /* control the size of the wave */
   
-  width: calc(3*4*var(--s)); 
-  aspect-ratio: 1;
+  width: calc(3 * 4 * var(--s)); 
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   padding: var(--s);
-  border: var(--s) solid #0000;
+  border: var(--s) solid transparent;
   background: #115139;
-  border-radius: calc(3.5*var(--s)); 
+  border-radius: calc(3.5 * var(--s)); 
   mask: 
-    radial-gradient(calc(sqrt(2)*var(--s)),#000 calc(100% - 1px),#0000),
+    radial-gradient(calc(sqrt(2) * var(--s)), #000 calc(100% - 1px), transparent),
     conic-gradient(#000 0 0) content-box,
-    radial-gradient(calc(sqrt(2)*var(--s)),#0000 100%,#000 calc(100% + 1px)) 
+    radial-gradient(calc(sqrt(2) * var(--s)), transparent 100%, #000 calc(100% + 1px)) 
+     var(--s) var(--s) padding-box;
+  -webkit-mask: 
+    radial-gradient(calc(sqrt(2) * var(--s)), #000 calc(100% - 1px), transparent),
+    conic-gradient(#000 0 0) content-box,
+    radial-gradient(calc(sqrt(2) * var(--s)), transparent 100%, #000 calc(100% + 1px)) 
      var(--s) var(--s) padding-box;
   mask-size: calc(var(--s)*4) calc(var(--s)*4);
+  -webkit-mask-size: calc(var(--s)*4) calc(var(--s)*4);
 }
 
+/* Each image custom placement */
 .container img:nth-child(1) {
-  translate: calc(2*var(--s)) calc(4*var(--s));
+  translate: calc(2 * var(--s)) calc(4 * var(--s));
   place-self: end;
 }
 .container img:nth-child(2) {
-  translate: 0 calc(2*var(--s))
+  translate: 0 calc(2 * var(--s));
 }
 .container img:nth-child(3) {
-  translate: calc(-2*var(--s)) calc(4*var(--s));
+  translate: calc(-2 * var(--s)) calc(4 * var(--s));
   place-self: start;
 }
 .container img:nth-child(4) {
-  translate: calc(4*var(--s)) 0;
-  width: calc(4*4*var(--s));
-  height: calc(3*4*var(--s));
+  translate: calc(4 * var(--s)) 0;
+  width: calc(4 * 4 * var(--s));
+  height: calc(3 * 4 * var(--s));
   place-self: center;
 }
 .container img:nth-child(5) {
-  width: calc(2*4*var(--s));
-  height: calc(4*4*var(--s));
+  width: calc(2 * 4 * var(--s));
+  height: calc(4 * 4 * var(--s));
   place-self: center;
 }
 .container img:nth-child(6) {
-  translate: calc(-4*var(--s)) 0;
-  width: calc(4*4*var(--s));
-  height: calc(3*4*var(--s));
+  translate: calc(-4 * var(--s)) 0;
+  width: calc(4 * 4 * var(--s));
+  height: calc(3 * 4 * var(--s));
   place-self: center;
 }
 .container img:nth-child(7) {
-  translate: calc(2*var(--s)) calc(-4*var(--s));
+  translate: calc(2 * var(--s)) calc(-4 * var(--s));
   place-self: end;
 }
 .container img:nth-child(8) {
-  translate: 0 calc(-2*var(--s))
+  translate: 0 calc(-2 * var(--s));
 }
 .container img:nth-child(9) {
-  translate: calc(-2*var(--s)) calc(-4*var(--s));
+  translate: calc(-2 * var(--s)) calc(-4 * var(--s));
   place-self: start;
 }
 
-
+/* Body styles */
 body {
   margin: 0;
+  text-align: center;
   min-height: 100vh;
   display: grid;
   place-content: center;
-  background: #c8d0d2;
+  background: #f7f7f7; /* kept one background only */
+  font-family: Arial, sans-serif;
+  color: #333;
 }
-
-/* format
-<div class="container">
-  <img src="https://picsum.photos/id/188/300/300">
-  <img src="https://picsum.photos/id/407/300/300">
-  <img src="https://picsum.photos/id/122/300/300">
-  <img src="https://picsum.photos/id/520/300/300">
-  <img src="https://picsum.photos/id/318/300/300">
-  <img src="https://picsum.photos/id/274/300/300">
-  <img src="https://picsum.photos/id/670/300/300">
-  <img src="https://picsum.photos/id/452/300/300">
-  <img src="https://picsum.photos/id/195/300/300">
-</div>*/
