@@ -3,53 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Image Gallery</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Main Gallery</title>
+  <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
+  <h1>Two Years with You</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <a href="subgallery.html">
+        <img src="images\a1.jpg" alt="Gallery 1" loading="lazy">
+      </a>
+      <p class="subtitle">You</p>
+    </div>
 
-<h2>Responsive Image Gallery</h2>
-<h4>Resize the browser window to see the effect!</h4>
+    <div class="gallery-item">
+      <a href="subgallery.html">
+        <img src="images\ak1.jpg" alt="Gallery 2" loading="lazy">
+      </a>
+      <p class="subtitle">You and Me</p>
+    </div>
 
-<div class="gallery">
+    <div class="gallery-item">
+      <a href="subgallery.html">
+        <img src="https://picsum.photos/id/1018/400/300" alt="Gallery 3" loading="lazy">
+      </a>
+      <p class="subtitle">Forest</p>
+    </div>
 
-  <div class="gallery-item">
-    <a target="_blank" href="images\a1.jpg">
-      <img src="images\a1.jpg" alt="Cinque Terre" width="600" height="400">
-    </a>
-    <div class="desc">Cinque Terre</div>
+    <div class="gallery-item">
+      <a href="subgallery.html">
+        <img src="https://picsum.photos/id/1020/400/300" alt="Gallery 4" loading="lazy">
+      </a>
+      <p class="subtitle">City</p>
+    </div>
   </div>
-
-  <div class="gallery-item">
-    <a target="_blank" href="images\a1.jpg">
-      <img src="images\a1.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="desc">Green Forest</div>
-  </div>
-
-  <div class="gallery-item">
-    <a target="_blank" href="images\a1.jpg">
-      <img src="images\a1.jpg" alt="Northern Lights" width="600" height="400">
-    </a>
-    <div class="desc">Northern Lights</div>
-  </div>
-
-  <div class="gallery-item">
-    <a target="_blank" href="images\a1.jpg">
-      <img src="images\a1.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">Mountains</div>
-  </div>
-
-</div>
-
-<p>Here we use media queries to re-arrange the images on different screen sizes:</p>
-<ul>
-  <li>If screen is larger than 768px wide - show four images side by side</li>
-  <li>If screen is smaller than 768px - show two images side by side</li>
-  <li>If screens is smaller than 480px - stack the images vertically (100%)</li>
-</ul>
-<p><strong>Tip:</strong> You will learn more about media queries later in our CSS Tutorial.</p>
-
 </body>
 </html>

@@ -1,60 +1,88 @@
-* {
-  box-sizing: border-box;
-}
-
+/* General body styles */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
-  text-align: center; /* centers headings and captions */
+  background: #498049;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2 {
-  margin: 1rem 0;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+/* Page title */
+h1 {
+  text-align: center;
   padding: 10px;
+  font-size: 60px;
+  color: #fff;
+  text-shadow:
+      -2px -2px 0 #000, /* Top-left shadow */
+       2px -2px 0 #000, /* Top-right shadow */
+      -2px  2px 0 #000, /* Bottom-left shadow */
+       2px  2px 0 #000; /* Bottom-right shadow */
+  
 }
 
+/* Gallery grid container */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual gallery card */
 .gallery-item {
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 8px;
-  overflow: hidden;
-  width: calc(25% - 20px);
-  transition: transform 0.3s, border-color 0.3s;
+  background: #fff;
+  padding: 10px;
+  text-align: center;        /* center text and image */
+  transition: box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
-  transform: scale(1.05);
-  border-color: #777;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Image inside card */
 .gallery-item img {
   width: 100%;
-  height: auto;
+  max-width: 200px;          /* never bigger than 200px wide */
+  height: 150px;             /* fixed thumbnail height */
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Subtitle under image */
+.subtitle {
+  display: block;           /* full width inside card */
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;       /* force center */
+}
+
+/* Back link style (used only on subgallery.html) */
+.back {
   display: block;
-}
-
-.gallery-item .desc {
+  text-align: center;
+  margin-top: 10px;
   padding: 10px;
-  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background: #333;
+  border-radius: 5px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Responsive breakpoints */
-@media only screen and (max-width: 768px) {
-  .gallery-item {
-    width: calc(50% - 20px);
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .gallery-item {
-    width: calc(100% - 20px);
-  }
+.back:hover {
+  background: #555;
 }
