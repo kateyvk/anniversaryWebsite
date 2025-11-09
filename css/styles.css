@@ -1,7 +1,7 @@
 /* General body styles */
 body {
   font-family: Arial, sans-serif;
-  background: #498049;
+  background: #365e36;
   margin: 0;
   padding: 0;
 }
@@ -24,8 +24,8 @@ h1 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  gap: 5px;
+  padding: 5px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -47,8 +47,8 @@ h1 {
 /* Image inside card */
 .gallery-item img {
   width: 100%;
-  max-width: 200px;          /* never bigger than 200px wide */
-  height: 150px;             /* fixed thumbnail height */
+  max-width: 300px;          /* never bigger than 200px wide */
+  height: 250px;             /* fixed thumbnail height */
   object-fit: cover;
   border-radius: 4px;
   cursor: pointer;
@@ -63,8 +63,8 @@ h1 {
 .subtitle {
   display: block;           /* full width inside card */
   margin-top: 8px;
-  font-size: 14px;
-  color: #333;
+  font-size: 20px;
+  color: #365f36;
   text-align: center;       /* force center */
 }
 
